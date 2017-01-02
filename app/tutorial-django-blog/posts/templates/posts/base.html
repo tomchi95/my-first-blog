@@ -1,0 +1,30 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mój nowy blog</title>
+    <meta charset="utf-8" />
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="/">Mój nowy blog</a>
+    </nav>
+    <div class="container">
+        <div class="col-sm-9">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="col-sm-3">
+            <p><img style="width: 100%" src="http://netstation.pl/site_media/images/logo_netstation_szare.png" /></p>
+            <p><img style="width: 100%" src="http://netstation.pl/site_media/images/zpr_logo_male.gif" /></p>
+        </div>
+        <div class="col-sm-12">
+            <footer>
+                Netstation &copy; {% now 'Y' %}       
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

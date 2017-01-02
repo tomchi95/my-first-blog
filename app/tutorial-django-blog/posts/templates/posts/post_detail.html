@@ -1,0 +1,7 @@
+{% extends "posts/base.html" %}
+{% block content %}
+<h1 id="title">{{ object.title }}</h1>
+<b>{{ object.lead }}</b>
+<p>{{ object.body}}</p>
+<span>{{ object.user.get_full_name }} {{ object.pub_date}}</span>
+{% endblock %}
